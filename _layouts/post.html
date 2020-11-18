@@ -1,0 +1,78 @@
+---
+layout: default
+---
+{%- capture menu_items -%}
+              <ul class="list-unstyled menu_list" id="menu">
+                <li><a href="#current_post" class="active_item">current post</a></li>
+                <li><a href="#related_posts">related posts</a></li>
+              </ul>
+              <ul class="list-unstyled menu_list">
+                <li><a href="/index.html">back home</a></li>
+              </ul>
+{%- endcapture -%}
+
+    <div id="splitlayout" class="splitlayout close-left open-right">
+      <div class="intro">
+        <!--Start Menu-->
+{%- include menu.html menu_items=menu_items -%}
+        <!--End Menu-->
+      </div><!-- /intro -->
+      <div class="page page-right full-height">
+        <div id="pt-main" class="pt-perspective page-inner">
+          <!--Start About Section-->
+          <section class="post padding-bottom-90 pt-page pt-page-current" id="current_post">
+            <div class="content">
+              <img class="center-block" src="{{ page.cover_large }}" alt="">
+              <div class="container">
+                <div class="sec_title" style="margin-bottom: 30px;">
+                  <h2 class="secondary-font">{{ page.title }}</h2>
+                </div>
+                <div class="post-content">
+                  <p>
+                    {{ page.content }}
+                  </p>
+                </div>
+                {%- include hr.html -%}
+                <dl class="row">
+                  <dt class="col-sm-2 text-right">Published</dt>
+                  <dd class="col-sm-10">{{ page.date | date_to_long_string: "ordinal" }}</dd>
+                  <dt class="col-sm-2 text-right">Tags</dt>
+                  <dd class="col-sm-10">{{ page.tags | join: ", " }}</dd>
+                  <dt class="col-sm-2 text-right">Notes</dt>
+                  <dd class="col-sm-10">
+                    Please keep in mind that this post is written with the
+                    intention to share my personal opinion, stance, perspective
+                    or experience on the topic. Under no circumstance I mean
+                    to suggest, offer, or endorse things like <em><q>The best
+                    solution</q></em>, <em><q>The way it should be</q></em> or
+                    <em><q>What you should do</q></em>. Even if I put my best
+                    efforts in reporting correct facts, figures and numbers, I
+                    am subject to human errors, and will happily address any
+                    mistake.
+                  </dd>
+                </dl><!--.row-->
+                {%- include hr.html -%}
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p>
+                      Please, feel free to share your comments and feedback
+                      with me: I genuinely appreciate to hear other people's
+                      perspective, experience and other forms of inputs.
+                      In case you're wondering, I built my blog to be a place
+                      for me to share, not to discuss; it does not include a
+                      public commet section by design.
+                    </p>
+                  </div>
+                  <div class="col-sm-7 contact">
+                  {%- include contact-form.html %}
+                  </div>
+                </div>
+
+              </div><!--.container-->
+            </div><!--.content-->
+          </section>
+          <!--End About Section-->
+{% include related-posts.html %}
+        </div><!--.page-inner-->
+      </div><!--.page-right-->
+    </div><!--.splitlayout-->

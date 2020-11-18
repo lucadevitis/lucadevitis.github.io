@@ -1,0 +1,27 @@
+---
+layout: default
+---
+{%- assign latest_post = site.posts | first -%}
+{%- capture menu_items -%}
+              <ul class="list-unstyled menu_list" id="menu">
+                <li><a href="#home" class="active_item">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#contact">contact</a></li>
+                <li><a href="#recent_posts">blog</a></li>
+              </ul>
+{%- endcapture -%}
+    <div id="splitlayout" class="splitlayout close-right">
+      <div class="intro">
+{%- include home.html -%}
+        <!--Start Menu-->
+{%- include menu.html menu_items=menu_items -%}
+        <!--End Menu-->
+      </div><!-- /intro -->
+      <div class="page page-right full-height">
+        <div id="pt-main" class="pt-perspective page-inner">
+{%- include about-main.html -%}
+{%- include recent-posts.html -%}
+{%- include contact-main.html -%}
+        </div><!--.page-inner-->
+      </div><!--.page-right-->
+    </div><!--.splitlayout-->

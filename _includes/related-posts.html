@@ -1,0 +1,42 @@
+{%- assign tags = "" | split: "," -%}
+{%- for post in site.related_posts -%}
+  {%- assign tags = tags | concat: post.tags -%}
+{%- endfor -%}
+{%- assign related_tags = tags | uniq -%}
+          <!--Start Recent Posts Section-->
+          <section class="blog padding-bottom-90 pt-page" id="related_posts">
+            <div class="content">
+              <div class="container">
+                <div class="sec_title">
+                  <h2 class="secondary-font">Related Posts</h2>
+                </div>
+                <h3 class="secondary-font tag-selector">TAGS</h3>
+                <ul class="list-unstyled ul-filter">
+                  <li data-filter="*" class="active_filter">all</li>
+
+{%- for tag in related_tags -%}
+                  <li data-filter=".{{ tag }}">{{ tag }}</li>
+{%- endfor -%}
+                </ul>
+                <div class="row grid">
+{% for post in site.related_posts %}
+                  <div class="col-xs-12 col-sm-6 item {% if forloop.first %}grid-sizer{% else %}grid-item{% endif %} {{ post.tags | join: " " }}">
+                    <a href="{{ post.url }}">
+                      <div class="blog__img">
+                        <i class="pe-7s-news-paper"></i>
+                        <img src="{{ post.cover_small }}" alt="">
+                      </div>
+                    </a>
+                    <div class="content matchH">
+                      <a href="{{ post.url }}">
+                      <p class="info">{{ post.date | date_to_long_string: "ordinal" }}</p>
+                      <h3>{{ post.title }}</h3>
+                      </a>
+                    </div>
+                  </div>
+{% endfor %}
+                </div>
+              </div><!--.container-->
+            </div><!--.content-->
+          </section>
+          <!--End Recent Posts Section-->

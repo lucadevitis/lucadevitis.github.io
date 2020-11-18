@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Future Imperfect';
+    src: url('/assets/fonts/FutureImperfect.woff2') format('woff2'),
+        url('/assets/fonts/FutureImperfect.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

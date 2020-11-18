@@ -1,0 +1,45 @@
+/*Main Color*/
+.side-right .fa-chevron-up,
+.home_type .side #typed,
+.intro-content .primary-font,
+.menu .social-icons a:hover,
+.menu .active_item,
+.mob-menu .menu-title,
+.menu .menu_list li a:hover,
+.testimonials .arrows span:hover,
+.fun-facts span,
+.portfolio_sec  .item .info p,
+.blog .item p.info,
+.zoom-anim-dialog .project_info span,
+.contact .info a:hover,
+.contact .info span.icon,
+.contact .contact_form .submit:hover {
+    color: #BF1922;
+}
+
+.home_type .more_info a:hover,
+.passions .passion div span,
+.skills .skill div span,
+.resume .date:after,
+a.rslides_nav.rslides1_nav:hover,
+.values .font-icon i,
+.services .font-icon i,
+li.active_filter:after,
+.zoom-anim-dialog a.demo:hover {
+    background-color: #BF1922;
+}
+
+.home_type .more_info a:hover,
+.testimonials .arrows span:hover,
+.fun-facts h4,
+.resume .item,
+.values .font-icon i,
+.services .font-icon i,
+.zoom-anim-dialog a.demo,
+.form-control:focus {
+    border-color: #BF1922;
+}
+
+g.Header {
+    stroke: #BF1922;
+}
