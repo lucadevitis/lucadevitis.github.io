@@ -32,19 +32,20 @@ layout: default
                   <h2 class="secondary-font">{{ page.title }}</h2>
                 </div>
                 <div class="post-content">
-                  <p>Cover Credits: <a href="{{ page.cover_credits | split: "|" | last }}">{{ page.cover_credits | split: "|" | first }}</a></p>
                   <p>
                     {{ page.content }}
                   </p>
                 </div>
                 {%- include hr.html -%}
                 <dl class="row">
-                  <dt class="col-sm-2 text-right">Published</dt>
-                  <dd class="col-sm-10">{{ page.date | date_to_long_string: "ordinal" }}</dd>
-                  <dt class="col-sm-2 text-right">Tags</dt>
-                  <dd class="col-sm-10">{{ page.tags | join: ", " | default: "--" }}</dd>
-                  <dt class="col-sm-2 text-right">Notes</dt>
-                  <dd class="col-sm-10">
+                  <dt class="col-sm-3 text-right">Published</dt>
+                  <dd class="col-sm-9">{{ page.date | date_to_long_string: "ordinal" }}</dd>
+                  <dt class="col-sm-3 text-right">Tags</dt>
+                  <dd class="col-sm-9">{{ page.tags | join: ", " | default: "--" }}</dd>
+                  <dt class="col-sm-3 text-right">Cover Credits</dt>
+                  <dd class="col-sm-9"><a href="{{ page.cover_credits | split: "|" | last | default: "#"}}">{{ page.cover_credits | split: "|" | first | default: "--" }}</a></dd>
+                  <dt class="col-sm-3 text-right">Notes</dt>
+                  <dd class="col-sm-9">
                     Please keep in mind that this post is written with the
                     intention to share my personal opinion, stance, perspective
                     or experience on the topic. Under no circumstance I mean
