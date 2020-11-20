@@ -1,5 +1,5 @@
 ---
-title: What is DevOps again?
+title: What is DevOps?
 layout: post
 tags: devops
 cover_svg: /assets/images/posts/cover-devops-principles-01.svg
