@@ -22,12 +22,17 @@ layout: default
           <!--Start About Section-->
           <section class="post padding-bottom-90 pt-page pt-page-current" id="current_post">
             <div class="content">
-              <img class="center-block" src="{{ page.cover_large }}" alt="">
+{%- if page.cover_svg -%}
+                        <img class="center-block" src="{{ page.cover_svg }}" width="{{ page.cover_width }}" alt="{{ page.title }}">
+{%- else -%}
+                        <img class="center-block" src="{{ page.cover_large }}" alt="{{ page.title }}">
+{%- endif -%}
               <div class="container">
                 <div class="sec_title" style="margin-bottom: 30px;">
                   <h2 class="secondary-font">{{ page.title }}</h2>
                 </div>
                 <div class="post-content">
+                  <p>Cover Credits: <a href="{{ page.cover_credits | split: "|" | last }}">{{ page.cover_credits | split: "|" | first }}</a></p>
                   <p>
                     {{ page.content }}
                   </p>
@@ -37,7 +42,7 @@ layout: default
                   <dt class="col-sm-2 text-right">Published</dt>
                   <dd class="col-sm-10">{{ page.date | date_to_long_string: "ordinal" }}</dd>
                   <dt class="col-sm-2 text-right">Tags</dt>
-                  <dd class="col-sm-10">{{ page.tags | join: ", " }}</dd>
+                  <dd class="col-sm-10">{{ page.tags | join: ", " | default: "--" }}</dd>
                   <dt class="col-sm-2 text-right">Notes</dt>
                   <dd class="col-sm-10">
                     Please keep in mind that this post is written with the
@@ -56,11 +61,11 @@ layout: default
                   <div class="col-sm-5">
                     <p>
                       Please, feel free to share your comments and feedback
-                      with me: I genuinely appreciate to hear other people's
+                      with me: I genuinely appreciate hearing other people's
                       perspective, experience and other forms of inputs.
                       In case you're wondering, I built my blog to be a place
                       for me to share, not to discuss; it does not include a
-                      public commet section by design.
+                      public comment section by design.
                     </p>
                   </div>
                   <div class="col-sm-7 contact">

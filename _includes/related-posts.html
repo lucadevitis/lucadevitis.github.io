@@ -24,7 +24,11 @@
                     <a href="{{ post.url }}">
                       <div class="blog__img">
                         <i class="pe-7s-news-paper"></i>
-                        <img src="{{ post.cover_small }}" alt="">
+{%- if post.cover_svg -%}
+                        <img src="{{ post.cover_svg }}" width="400" height="300" alt="{{ post.title }}">
+{%- else -%}
+                        <img src="{{ post.cover_small }}" alt="{{ post.title }}">
+{%- endif -%}
                       </div>
                     </a>
                     <div class="content matchH">
