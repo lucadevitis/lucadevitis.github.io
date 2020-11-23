@@ -7,7 +7,7 @@ cover_width: 50%
 cover_credits: Luca De Vitis|/assets/images/posts/cover-devops-principles-01.svg 
 
 ---
-In this post I want to talk about my stance on hiring a *<q>DevOps
+In this post I want to talk about my perspective on hiring a *<q>DevOps
 Engineer</q>*, why I believe it looks **quite bad** for a business to advertise
 for a position in *that* role, and if I identify as DevOps Engineer.
 
