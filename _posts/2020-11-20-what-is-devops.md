@@ -7,13 +7,17 @@ cover_width: 50%
 cover_credits: Luca De Vitis|/assets/images/posts/cover-devops-principles-01.svg 
 
 ---
+In this post I want to talk about my stance on hiring a *<q>DevOps
+Engineer</q>*, why I believe it looks **quite bad** for a business to advertise
+for a position in *that* role, and if I identify as DevOps Engineer.
+
+<!--more-->
+
 I was recently reading a thread on LinkedIn about a rant on a job offer posted
 by a recruiter. A question that I believed genuine and that stroke me the most
 was:
 
 > What is DevOps, then?
-
-<!--more-->
 
 Ranting on recruiters and the hiring process is a common attitude that I can't
 see going away any time soon; however, I may write a separate post with my
