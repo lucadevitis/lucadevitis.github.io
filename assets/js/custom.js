@@ -284,7 +284,7 @@ $(function () {
     /*--------------------------------
         06. Form Validation
     ----------------------------------*/
-    $('.contact form .submit').on('click', function () {
+    /* $('.contact form .submit').on('click', function () {
 
         $('.contact form .form-control').removeClass("errorForm");
         $('.msg_success,.msg_error').css("display","");
@@ -340,7 +340,7 @@ $(function () {
         
         return false;
         
-    });
+    }); */
 
     /*--------------------------------
         07. Window Resize
